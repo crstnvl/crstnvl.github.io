@@ -100,3 +100,31 @@ a {
 a:hover {
     color: #ff6347;
 }
+
+/* Tu CSS actual termina más o menos así */
+a {
+    color: #0077b6;
+}
+
+/* Aquí empieza lo nuevo que debes pegar */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.skill {
+    background-color: #1b263b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.skill:hover {
+    background-color: #ff6347;
+}
+
