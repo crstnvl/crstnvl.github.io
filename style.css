@@ -204,16 +204,15 @@ nav a:hover, .project a:hover {
     transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s;
 }
 
-/* Add this to the bottom of your style.css file */
 .contact-link {
     color: #0077b6;
     text-decoration: none;
-    font-weight: bold;
     padding: 0 10px;
+    font-size: 24px; /* Icon size */
 }
 
 .contact-link:hover {
     color: #ff6347;
-    text-decoration: underline;
 }
+
 
