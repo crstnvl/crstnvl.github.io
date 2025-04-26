@@ -203,3 +203,17 @@ nav a:hover, .project a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s;
 }
+
+/* Add this to the bottom of your style.css file */
+.contact-link {
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.contact-link:hover {
+    color: #ff6347;
+    text-decoration: underline;
+}
+
