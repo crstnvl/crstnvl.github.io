@@ -207,7 +207,7 @@ nav a:hover, .project a:hover {
 .contact-link {
     color: #0077b6;
     text-decoration: none;
-    padding: 0 10px;
+    padding: 0 15px; /* Increased padding for more space */
     font-size: 24px; /* Icon size */
 }
 
@@ -215,4 +215,9 @@ nav a:hover, .project a:hover {
     color: #ff6347;
 }
 
-
+/* Optional: Add spacing between the pipe symbol and icons */
+footer p a:not(:last-child)::after {
+    content: "|";
+    margin: 0 10px;
+    color: #333;
+}
