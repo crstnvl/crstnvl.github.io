@@ -1,42 +1,72 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cristian Antonio Avila Hernandez - Portafolio</title>
+    <!-- Enlace a Google Fonts para cambiar tipografía -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Enlace a Font Awesome para los íconos de redes sociales -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>Cristian Antonio Avila Hernandez</h1>
         <p>Data Analyst con pasión por el cambio climático, el deporte y la cultura digital.</p>
     </header>
-    <nav>
+
+    <!-- Navbar -->
+    <nav class="navbar">
         <a href="#environment">🌎 Medio Ambiente</a>
         <a href="#sports">🏈 Deportes</a>
         <a href="#entertainment">🎮 Entretenimiento</a>
     </nav>
+
+    <!-- Sección Proyectos Medio Ambiente -->
     <section id="environment">
         <h2>🌎 Proyectos de Medio Ambiente</h2>
         <ul>
             <li><a href="projects/environment.html">Ver proyectos ambientales</a></li>
         </ul>
     </section>
+
+    <!-- Sección Proyectos Deportivos -->
     <section id="sports">
         <h2>🏈 Proyectos Deportivos</h2>
         <ul>
             <li><a href="projects/sports.html">Ver proyectos deportivos</a></li>
         </ul>
     </section>
+
+    <!-- Sección Proyectos Entretenimiento -->
     <section id="entertainment">
         <h2>🎮 Proyectos de Entretenimiento</h2>
         <ul>
             <li><a href="projects/entertainment.html">Ver proyectos de entretenimiento</a></li>
         </ul>
     </section>
+
+    <!-- Footer con redes sociales -->
     <footer>
         <p>Contacto: <a href="mailto:c.avila0306@gmail.com">c.avila0306@gmail.com</a></p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/tu-nombre" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/crstnvl" target="_blank" class="social-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:c.avila0306@gmail.com" class="social-icon">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
     </footer>
+
+    <!-- Iniciar animaciones al hacer scroll -->
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
