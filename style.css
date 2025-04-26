@@ -1,10 +1,19 @@
 /* Fuente moderna */
+/* Cambia la fuente por defecto a Roboto */
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, #e0eafc, #cfdef3);
-    color: #333;
+}
+
+/* Paleta de colores */
+:root {
+    --primary-color: #0077b6; /* Azul */
+    --secondary-color: #1b263b; /* Gris oscuro */
+    --highlight-color: #ff6347; /* Naranja suave */
+}
+
+/* Fondo claro para las secciones */
+section {
+    background-color: #f7f7f7;
 }
 
 /* Estilo del header */
