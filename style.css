@@ -1,21 +1,32 @@
-/* Tipografía y diseño general */
+/* Fuente moderna */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
     color: #333;
 }
 
-/* Estilos para el Header */
+/* Estilo del header */
 header {
-    background-color: #0d1b2a;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
     color: white;
-    padding: 2rem;
+    padding: 4rem 2rem;
     text-align: center;
+    position: relative;
 }
 
-/* Estilos para la barra de navegación (Navbar) */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
 nav {
     background: #e0e1dd;
     padding: 1rem;
@@ -27,70 +38,65 @@ nav a {
     color: #0d1b2a;
     text-decoration: none;
     font-weight: bold;
-    transition: all 0.3s ease; /* Añadimos transición para el hover */
+    padding: 8px 20px;
+    border-radius: 25px;
+    transition: background 0.3s, transform 0.3s;
 }
 
 nav a:hover {
-    color: #ff6347; /* Rojo suave para el hover */
-    transform: scale(1.1); /* Efecto de aumento del tamaño */
+    background-color: #ff6347;
+    color: white;
+    transform: translateY(-2px);
 }
 
-/* Estilos para las secciones */
+main {
+    padding: 2rem;
+}
+
 section {
     padding: 2rem;
     background-color: #ffffff;
     margin: 20px 0;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Agregamos sombra para un look más moderno */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    color: #0d1b2a;
     margin-bottom: 1rem;
 }
 
-/* Estilos para el Footer */
 footer {
     background-color: #1b263b;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
 }
 
 footer .social-links {
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
 footer .social-icon {
     color: white;
-    font-size: 24px;
     margin: 0 10px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
     transition: all 0.3s ease;
 }
 
 footer .social-icon:hover {
     color: #ff6347;
-    transform: scale(1.2); /* Efecto de aumentar el tamaño de los íconos */
+    transform: scale(1.2);
 }
 
-/* Enlaces */
 a {
     color: #0077b6;
-    text-decoration: none;
 }
 
 a:hover {
     color: #ff6347;
-}
-
-/* Animación AOS - Si decides usar AOS para animaciones al hacer scroll */
-[data-aos="fade-up"] {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.5s ease;
-}
-
-[data-aos="fade-up"].aos-animate {
-    opacity: 1;
-    transform: translateY(0);
 }
