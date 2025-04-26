@@ -188,3 +188,18 @@ section.visible {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Efecto hover en enlaces */
+nav a:hover, .project a:hover {
+    color: var(--highlight-color);
+    text-decoration: underline;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Efecto hover en botones y proyectos */
+.project:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s;
+}
