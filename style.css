@@ -16,7 +16,6 @@ section {
     background-color: #f7f7f7;
 }
 
-/* Estilo del header */
 header {
     background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
     color: black;
@@ -26,13 +25,8 @@ header {
 }
 
 header h1 {
-    font-size: 4rem; /* Increase name size */
+    font-size: 4rem; /* Increased title size */
     font-weight: bold;
-}
-
-header p {
-    font-size: 2rem; /* Increase phrase size */
-    font-style: italic;
 }
 
 header::before {
