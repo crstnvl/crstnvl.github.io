@@ -1,3 +1,4 @@
+/* Tipografía y diseño general */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -5,33 +6,91 @@ body {
     background-color: #ffffff;
     color: #333;
 }
+
+/* Estilos para el Header */
 header {
     background-color: #0d1b2a;
     color: white;
     padding: 2rem;
     text-align: center;
 }
+
+/* Estilos para la barra de navegación (Navbar) */
 nav {
     background: #e0e1dd;
     padding: 1rem;
     text-align: center;
 }
+
 nav a {
     margin: 0 15px;
     color: #0d1b2a;
     text-decoration: none;
     font-weight: bold;
+    transition: all 0.3s ease; /* Añadimos transición para el hover */
 }
+
+nav a:hover {
+    color: #ff6347; /* Rojo suave para el hover */
+    transform: scale(1.1); /* Efecto de aumento del tamaño */
+}
+
+/* Estilos para las secciones */
 section {
     padding: 2rem;
     background-color: #ffffff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Agregamos sombra para un look más moderno */
 }
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para el Footer */
 footer {
     background-color: #1b263b;
     color: white;
     text-align: center;
     padding: 1rem;
 }
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-icon {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+footer .social-icon:hover {
+    color: #ff6347;
+    transform: scale(1.2); /* Efecto de aumentar el tamaño de los íconos */
+}
+
+/* Enlaces */
 a {
     color: #0077b6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff6347;
+}
+
+/* Animación AOS - Si decides usar AOS para animaciones al hacer scroll */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
 }
