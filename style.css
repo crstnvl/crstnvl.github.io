@@ -1,160 +1,227 @@
-:root {
-    --text: #0d1117;          /* Negro-grisáceo de GitHub */
-    --text-light: #6e7681;    /* Gris texto secundario */
-    --primary: #58a6ff;       /* Azul enlaces GitHub */
-    --bg: #ffffff;            /* Fondo blanco puro */
-}
-
+/* Fuente moderna */
+/* Cambia la fuente por defecto a Roboto */
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    line-height: 1.6;
-    color: var(--text);
-    background: var(--bg);
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    font-family: 'Roboto', sans-serif;
 }
 
-.profile-header {
+/* Paleta de colores */
+:root {
+    --primary-color: #0077b6; /* Azul */
+    --secondary-color: #1b263b; /* Gris oscuro */
+    --highlight-color: #ff6347; /* Naranja suave */
+}
+
+/* Fondo claro para las secciones */
+section {
+    background-color: #f7f7f7;
+}
+
+header {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    color: black;
+    padding: 4rem 2rem;
     text-align: center;
-    margin: 3rem 0;
+    position: relative;
 }
 
-.profile-header h1 {
-    font-family: 'Space Mono', monospace;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+header h1 {
+    font-size: 4rem; /* Increased title size */
+    font-weight: bold;
 }
 
-.tagline {
-    color: var(--text-light);
-    margin-bottom: 1.5rem;
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
 
-/* Navegación estilo priankr */
-.profile-nav {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 2rem 0;
+nav {
+    background: #e0e1dd;
+    padding: 1rem;
+    text-align: center;
 }
 
-.profile-nav a {
-    color: var(--text);
+nav a {
+    margin: 0 15px;
+    color: #0d1b2a;
     text-decoration: none;
-    font-family: 'Space Mono', monospace;
-    font-size: 0.9rem;
-    text-transform: lowercase;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 25px;
+    transition: background 0.3s, transform 0.3s;
 }
 
-.profile-nav a:hover {
-    color: var(--primary);
+nav a:hover {
+    background-color: #ff6347;
+    color: white;
+    transform: translateY(-2px);
 }
 
-/* Secciones */
-.profile-section {
-    margin-bottom: 3rem;
+main {
+    padding: 2rem;
 }
 
-.profile-section h2 {
-    font-family: 'Space Mono', monospace;
-    font-size: 1.25rem;
+section {
+    padding: 2rem;
+    background-color: #ffffff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #0d1b2a;
     margin-bottom: 1rem;
-    color: var(--text);
 }
 
-/* Skills (con iconos más grandes y texto debajo) */
-.skills-list {
+footer {
+    background-color: #1b263b;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+footer .social-links {
+    margin-top: 1rem;
+}
+
+footer .social-icon {
+    color: white;
+    margin: 0 10px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+footer .social-icon:hover {
+    color: #ff6347;
+    transform: scale(1.2);
+}
+
+a {
+    color: #0077b6;
+}
+
+a:hover {
+    color: #ff6347;
+}
+
+/* Tu CSS actual termina más o menos así */
+a {
+    color: #0077b6;
+}
+
+/* Aquí empieza lo nuevo que debes pegar */
+.skills-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem; /* Espaciado entre los items */
     justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
 }
 
 .skill {
-    display: flex;
-    flex-direction: column;  /* Alineación en columna */
-    align-items: center;
-    gap: 0.5rem;  /* Espacio entre ícono y texto */
-    font-size: 1rem;
-    text-align: center;
-}
-
-.skill i {
-    font-size: 2.5rem;  /* Aumento del tamaño del ícono */
-    color: var(--primary);
-}
-
-.skill span {
-    font-size: 1rem;
-    color: var(--text);
-}
-
-/* Projects (tarjetas ultra-minimalistas) */
-.project {
-    margin-bottom: 1.5rem;
-}
-
-.project h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.25rem;
-    color: var(--text);
-}
-
-.project p {
-    color: var(--text-light);
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-}
-
-.project-link {
-    color: var(--primary);
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.project-link:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-.profile-footer {
-    text-align: center;
-    margin: 4rem 0 2rem;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.social-links a {
-    color: var(--text-light);
-    font-size: 1.25rem;
-}
-
-.social-links a:hover {
-    color: var(--primary);
-}
-
-/* Language selector */
-.language-selector {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.language-selector button {
-    background-color: #58a6ff;
-    border: none;
+    background-color: #1b263b;
     color: white;
     padding: 10px 20px;
+    border-radius: 20px;
     font-size: 1rem;
-    margin: 5px;
-    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-.language-selector button:hover {
-    background-color: #007bff;
+.skill:hover {
+    background-color: #ff6347;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+    animation: fadeInUp 1s ease forwards;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Cuando la sección esté visible */
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efecto hover en enlaces */
+nav a:hover, .project a:hover {
+    color: var(--highlight-color);
+    text-decoration: underline;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Efecto hover en botones y proyectos */
+.project:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s;
+}
+
+.contact-link {
+    color: #0077b6;
+    text-decoration: none;
+    padding: 0 15px; /* Increased padding for more space */
+    font-size: 24px; /* Icon size */
+}
+
+.contact-link:hover {
+    color: #ff6347;
+}
+
+/* Optional: Add spacing between the pipe symbol and icons */
+footer p a:not(:last-child)::after {
+    content: "|";
+    margin: 0 10px;
+    color: #333;
 }
