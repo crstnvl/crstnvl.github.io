@@ -1,115 +1,67 @@
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cristian Avila - Portfolio</title>
-    <!-- Tipografía moderna -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Cristian Avila | Data Analyst</title>
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- AOS Animation CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<script>
-    // Detectar cuándo una sección entra en la pantalla
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    });
-
-    // Seleccionamos todas las secciones
-    document.querySelectorAll('section').forEach(section => {
-        observer.observe(section);
-    });
-</script>
-
 <body>
-    <header>
-        <h1>Cristian Avila</h1>
-        <p>Data Analyst with a passion for sustainability, climate change, sports, and digital culture..</p>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Cristian Avila</h1>
+            <p class="subtitle">Data Analyst | Sustainability & Sports</p>
+        </header>
 
-    <nav>
-        <a href="#environment">🌎 Environment</a>
-        <a href="#sports">🏈 Sports</a>
-        <a href="#entertainment">🎮 Entertainment</a>
-    </nav>
+        <nav class="main-nav">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </nav>
 
-    <nav>...</nav>
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Environmental Engineer transitioning into Data Analytics. Passionate about climate change, sports, and digital culture. I transform data into actionable insights for sustainable development.</p>
+            </section>
 
-<section id="about" data-aos="fade-up">
-    <h2>🙋‍♂️ About Me</h2>
-    <p>Hello, I'm Cristian Avila, an Environmental Engineer transitioning into the Data Analytics field. With a strong background in sustainability, environmental health and safety (EHS), and project management, I now focus on transforming data into meaningful insights that support better decision-making and sustainable development.</p>
-    <p>I am passionate about combining my environmental expertise with data-driven strategies. I specialize in data analysis with Python and SQL, creating interactive dashboards with Power BI, and applying predictive analytics to optimize processes in both industrial and environmental contexts.</p>
-    <p>My main interest lies in working on projects related to climate change, where data can be a powerful tool to drive environmental action. However, I am also open to opportunities in sports analytics, as well as the entertainment sector, particularly in areas like esports, gaming, and anime analytics.</p>
-    <p>Currently, I’m seeking opportunities where I can contribute to projects that drive positive environmental impact or deliver meaningful insights across different industries through the smart use of data, technology, and innovation.</p>
-</section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">Python</div>
+                    <div class="skill-item">SQL</div>
+                    <div class="skill-item">Power BI</div>
+                    <div class="skill-item">Predictive Analysis</div>
+                    <div class="skill-item">Sustainability</div>
+                </div>
+            </section>
 
- <section id="skills" data-aos="fade-up">
-    <h2>🛠️ Skills</h2>
-    <div class="skills-container">
-        <div class="skill">Python</div>
-        <div class="skill">R</div>
-        <div class="skill">SQL</div>
-        <div class="skill">Power BI</div>
-        <div class="skill">Intermediate Excel</div>
-        <div class="skill">Predictive Analysis</div>
-        <div class="skill">Data Science</div>
-        <div class="skill">Environmental Sustainability</div>
-        <div class="skill">Machine Learning (basic)</div>
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="project-card">
+                    <h3>Environmental Analysis</h3>
+                    <p>Climate data visualization with Python.</p>
+                    <a href="#" class="text-link">View project →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Sports Analytics</h3>
+                    <p>Player performance dashboards.</p>
+                    <a href="#" class="text-link">View project →</a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="social-links">
+                <a href="mailto:c.avila0306@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/cavila0306"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/crstnvl"><i class="fab fa-github"></i></a>
+            </div>
+        </footer>
     </div>
-</section>
-
-    <main>
-        <section id="environment" data-aos="fade-up">
-            <h2>🌎 Environmental Projects</h2>
-            <ul>
-                <li><a href="projects/environment.html">View Environmental Projects</a></li>
-            </ul>
-        </section>
-
-        <section id="sports" data-aos="fade-up">
-            <h2>🏈 Sports Projects</h2>
-            <ul>
-                <li><a href="projects/sports.html">View Sports Projects</a></li>
-            </ul>
-        </section>
-
-        <section id="entertainment" data-aos="fade-up">
-            <h2>🎮 Entertainment Projects</h2>
-            <ul>
-                <li><a href="projects/entertainment.html">View Entertainment Projects</a></li>
-            </ul>
-        </section>
-    </main>
-
-<footer>
-    <p>Contact me via: 
-        <a href="mailto:c.avila0306@gmail.com" class="contact-link">
-            <i class="fas fa-envelope"></i>
-        </a> | 
-        <a href="https://www.linkedin.com/in/cavila0306" target="_blank" class="contact-link">
-            <i class="fab fa-linkedin"></i>
-        </a> | 
-        <a href="https://github.com/crstnvl" target="_blank" class="contact-link">
-            <i class="fab fa-github"></i>
-        </a>
-    </p>
-</footer>
-
-
-
-    <!-- AOS Animation JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 </body>
 </html>
