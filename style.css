@@ -65,7 +65,7 @@ body {
     color: var(--text);
 }
 
-/* Skills (con iconos) */
+/* Skills (con iconos más grandes y texto debajo) */
 .skills-list {
     display: flex;
     flex-wrap: wrap;
@@ -75,19 +75,21 @@ body {
 
 .skill {
     display: flex;
+    flex-direction: column;  /* Esto asegura que el texto quede debajo del ícono */
     align-items: center;
     gap: 0.5rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .skill i {
-    font-size: 1.5rem;
+    font-size: 2rem;  /* Aumento del tamaño del ícono */
     color: var(--primary);
 }
 
 .skill span {
     font-size: 1rem;
     color: var(--text);
+    text-align: center;  /* Centra el texto debajo del ícono */
 }
 
 /* Projects (tarjetas ultra-minimalistas) */
