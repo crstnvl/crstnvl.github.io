@@ -1,62 +1,21 @@
 <!DOCTYPE html>
-<header class="profile-header">
-    <h1>Data Analyst</h1>
-    <div class="language-selector">
-        <button onclick="changeLanguage('es')">Español</button>
-        <button onclick="changeLanguage('en')">English</button>
-    </div>
-    <p class="tagline"></p>
-    <nav class="profile-nav">
-        <a href="#about">sobre mí</a>
-        <a href="#skills">habilidades</a>
-        <a href="#projects">proyectos</a>
-    </nav>
-</header>
-
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cristian Avila | Data Analyst</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
-    <script>
-    let language = 'es';  // Idioma predeterminado
-
-    function changeLanguage(lang) {
-        language = lang;
-        updateContent();
-    }
-
-    function updateContent() {
-        // Cambiar los textos según el idioma
-        if (language === 'es') {
-            document.querySelector('h1').innerText = 'Data Analyst';
-            document.querySelector('.tagline').innerText = '';  // Puedes agregar un texto en español si lo deseas
-            document.querySelector('a[href="#about"]').innerText = 'sobre mí';
-            document.querySelector('a[href="#skills"]').innerText = 'habilidades';
-            document.querySelector('a[href="#projects"]').innerText = 'proyectos';
-        } else if (language === 'en') {
-            document.querySelector('h1').innerText = 'Data Analyst';
-            document.querySelector('.tagline').innerText = '';  // Puedes agregar un texto en inglés si lo deseas
-            document.querySelector('a[href="#about"]').innerText = 'about me';
-            document.querySelector('a[href="#skills"]').innerText = 'skills';
-            document.querySelector('a[href="#projects"]').innerText = 'projects';
-        }
-    }
-
-    // Al cargar la página, establece el idioma
-    updateContent();
-</script>
-
 <body>
     <div class="container">
         <!-- Header -->
         <header class="profile-header">
             <h1>Data Analyst</h1>
+            <div class="language-selector">
+                <button onclick="changeLanguage('es')">Español</button>
+                <button onclick="changeLanguage('en')">English</button>
+            </div>
             <p class="tagline"></p>
             <nav class="profile-nav">
                 <a href="#about">sobre mí</a>
@@ -68,7 +27,7 @@
         <main>
             <section id="about" class="profile-section">
                 <h2>Sobre mí</h2>
-                <p>Soy Cristian Avila, Ingeniero Ambiental con experiencia en análisis de datos y sostenibilidad. Me apasiona convertir datos en información útil para decisiones sostenibles y la mejora de procesos. Actualmente busco oportunidades donde aplicar mis habilidades de análisis predictivo y optimización de procesos.</p>
+                <p class="text-about">Soy Cristian Avila, Ingeniero Ambiental con experiencia en análisis de datos y sostenibilidad. Me apasiona convertir datos en información útil para decisiones sostenibles y la mejora de procesos. Actualmente busco oportunidades donde aplicar mis habilidades de análisis predictivo y optimización de procesos.</p>
             </section>
 
             <section id="skills" class="profile-section">
@@ -109,11 +68,6 @@
                     <p>Creación de un panel interactivo en Power BI para análisis de sostenibilidad en empresas.</p>
                     <a href="#" class="project-link">Ver →</a>
                 </div>
-                <div class="project">
-                    <h3>NFL Ofensiva EDA</h3>
-                    <p>Análisis exploratorio de datos sobre las estadísticas ofensivas de la NFL utilizando Python y visualizaciones interactivas.</p>
-                    <a href="https://github.com/crstnvl/nfl-ofensiva-eda" class="project-link" target="_blank">Ver Proyecto en GitHub →</a>
-                </div>
             </section>
         </main>
 
@@ -126,5 +80,36 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        let language = 'es';  // Idioma predeterminado
+
+        function changeLanguage(lang) {
+            language = lang;
+            updateContent();
+        }
+
+        function updateContent() {
+            // Cambiar los textos según el idioma
+            if (language === 'es') {
+                document.querySelector('h1').innerText = 'Data Analyst';
+                document.querySelector('.tagline').innerText = '';  // Puedes agregar un texto en español si lo deseas
+                document.querySelector('a[href="#about"]').innerText = 'sobre mí';
+                document.querySelector('a[href="#skills"]').innerText = 'habilidades';
+                document.querySelector('a[href="#projects"]').innerText = 'proyectos';
+                document.querySelector('.text-about').innerText = 'Soy Cristian Avila, Ingeniero Ambiental con experiencia en análisis de datos...';
+            } else if (language === 'en') {
+                document.querySelector('h1').innerText = 'Data Analyst';
+                document.querySelector('.tagline').innerText = '';  // Puedes agregar un texto en inglés si lo deseas
+                document.querySelector('a[href="#about"]').innerText = 'about me';
+                document.querySelector('a[href="#skills"]').innerText = 'skills';
+                document.querySelector('a[href="#projects"]').innerText = 'projects';
+                document.querySelector('.text-about').innerText = 'I am Cristian Avila, Environmental Engineer with experience in data analysis...';
+            }
+        }
+
+        // Al cargar la página, establece el idioma
+        updateContent();
+    </script>
 </body>
 </html>
