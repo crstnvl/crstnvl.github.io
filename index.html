@@ -68,6 +68,11 @@
                     <p id="project2-description"></p>
                     <a href="#" class="project-link" id="project2-link"></a>
                 </div>
+                <div class="project">
+                    <h3 id="nfl-project-title"></h3>
+                    <p id="nfl-project-description"></p>
+                    <a href="#" class="project-link" id="nfl-project-link"></a>
+                </div>
             </section>
         </main>
 
@@ -102,8 +107,11 @@
                 project1Description: "Visualización de datos climáticos con Python...",
                 project2Title: "Panel ambiental",
                 project2Description: "Creación de un panel interactivo en Power BI...",
+                nflProjectTitle: "Proyecto NFL",
+                nflProjectDescription: "Análisis de estadísticas de jugadores de la NFL y predicciones de rendimiento usando R.",
                 project1Link: "Ver →",
-                project2Link: "Ver →"
+                project2Link: "Ver →",
+                nflProjectLink: "Ver proyecto →"
             },
             en: {
                 profileName: "Cristian Avila | Data Analyst",
@@ -124,8 +132,11 @@
                 project1Description: "Visualization of climate data with Python...",
                 project2Title: "Environmental Dashboard",
                 project2Description: "Creation of an interactive dashboard in Power BI...",
+                nflProjectTitle: "NFL Project",
+                nflProjectDescription: "Analysis of NFL player statistics and performance predictions using R.",
                 project1Link: "View →",
-                project2Link: "View →"
+                project2Link: "View →",
+                nflProjectLink: "View project →"
             }
         };
 
@@ -163,6 +174,9 @@
             document.querySelector('#project2-title').innerText = t.project2Title;
             document.querySelector('#project2-description').innerText = t.project2Description;
             document.querySelector('#project2-link').innerText = t.project2Link;
+            document.querySelector('#nfl-project-title').innerText = t.nflProjectTitle;
+            document.querySelector('#nfl-project-description').innerText = t.nflProjectDescription;
+            document.querySelector('#nfl-project-link').innerText = t.nflProjectLink;
         }
 
         // Al cargar la página, establece el idioma predeterminado
