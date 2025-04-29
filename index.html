@@ -64,4 +64,109 @@
                     <a href="#" class="project-link" id="project1-link"></a>
                 </div>
                 <div class="project">
-                    <h3 id="project2-title
+                    <h3 id="project2-title"></h3>
+                    <p id="project2-description"></p>
+                    <a href="#" class="project-link" id="project2-link"></a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="profile-footer">
+            <div class="social-links">
+                <a href="mailto:c.avila0306@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/cavila0306"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/crstnvl"><i class="fab fa-github"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const translations = {
+            es: {
+                profileName: "Cristian Ávila | Data Analyst",
+                tagline: "Ingeniero Ambiental y Analista de Datos",
+                aboutLink: "sobre mí",
+                skillsLink: "habilidades",
+                projectsLink: "proyectos",
+                aboutTitle: "Sobre mí",
+                aboutText: "Soy Cristian Avila, Ingeniero Ambiental con experiencia en análisis de datos y sostenibilidad...",
+                skillsTitle: "Habilidades",
+                python: "Python",
+                sql: "SQL",
+                r: "R",
+                powerbi: "Power BI",
+                excel: "Excel",
+                projectsTitle: "Proyectos",
+                project1Title: "Análisis de datos climáticos",
+                project1Description: "Visualización de datos climáticos con Python...",
+                project2Title: "Panel ambiental",
+                project2Description: "Creación de un panel interactivo en Power BI...",
+                project1Link: "Ver →",
+                project2Link: "Ver →"
+            },
+            en: {
+                profileName: "Cristian Avila | Data Analyst",
+                tagline: "Environmental Engineer and Data Analyst",
+                aboutLink: "about me",
+                skillsLink: "skills",
+                projectsLink: "projects",
+                aboutTitle: "About Me",
+                aboutText: "I am Cristian Avila, Environmental Engineer with experience in data analysis and sustainability...",
+                skillsTitle: "Skills",
+                python: "Python",
+                sql: "SQL",
+                r: "R",
+                powerbi: "Power BI",
+                excel: "Excel",
+                projectsTitle: "Projects",
+                project1Title: "Climate Data Analysis",
+                project1Description: "Visualization of climate data with Python...",
+                project2Title: "Environmental Dashboard",
+                project2Description: "Creation of an interactive dashboard in Power BI...",
+                project1Link: "View →",
+                project2Link: "View →"
+            }
+        };
+
+        let currentLanguage = 'es';
+
+        function changeLanguage(lang) {
+            currentLanguage = lang;
+            updateContent();
+        }
+
+        function updateContent() {
+            const t = translations[currentLanguage];
+
+            document.title = t.profileName;
+            document.querySelector('#profile-name').innerText = t.profileName;
+            document.querySelector('#tagline').innerText = t.tagline;
+            document.querySelector('#about-link').innerText = t.aboutLink;
+            document.querySelector('#skills-link').innerText = t.skillsLink;
+            document.querySelector('#projects-link').innerText = t.projectsLink;
+
+            document.querySelector('#about-title').innerText = t.aboutTitle;
+            document.querySelector('#text-about').innerText = t.aboutText;
+
+            document.querySelector('#skills-title').innerText = t.skillsTitle;
+            document.querySelector('#python').innerText = t.python;
+            document.querySelector('#sql').innerText = t.sql;
+            document.querySelector('#r').innerText = t.r;
+            document.querySelector('#powerbi').innerText = t.powerbi;
+            document.querySelector('#excel').innerText = t.excel;
+
+            document.querySelector('#projects-title').innerText = t.projectsTitle;
+            document.querySelector('#project1-title').innerText = t.project1Title;
+            document.querySelector('#project1-description').innerText = t.project1Description;
+            document.querySelector('#project1-link').innerText = t.project1Link;
+            document.querySelector('#project2-title').innerText = t.project2Title;
+            document.querySelector('#project2-description').innerText = t.project2Description;
+            document.querySelector('#project2-link').innerText = t.project2Link;
+        }
+
+        // Al cargar la página, establece el idioma predeterminado
+        updateContent();
+    </script>
+</body>
+</html>
