@@ -1,12 +1,9 @@
+/* ESTILO PRIANKR (https://priankr.github.io) */
 :root {
-    --text: #0d1117;
-    --text-light: #6e7681;
-    --primary: #58a6ff;
-    --bg: #ffffff;
-}
-
-html {
-    scroll-behavior: smooth;
+    --text: #0d1117;          /* Negro-grisáceo de GitHub */
+    --text-light: #6e7681;    /* Gris texto secundario */
+    --primary: #58a6ff;       /* Azul enlaces GitHub */
+    --bg: #ffffff;            /* Fondo blanco puro */
 }
 
 body {
@@ -36,6 +33,7 @@ body {
     margin-bottom: 1.5rem;
 }
 
+/* Navegación estilo priankr */
 .profile-nav {
     display: flex;
     justify-content: center;
@@ -55,6 +53,7 @@ body {
     color: var(--primary);
 }
 
+/* Secciones */
 .profile-section {
     margin-bottom: 3rem;
 }
@@ -66,21 +65,32 @@ body {
     color: var(--text);
 }
 
+/* Skills (con iconos) */
 .skills-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 1.5rem;
+    justify-content: center;
 }
 
-.skills-list span {
-    background: #f6f8fa;
-    border: 1px solid #d0d7de;
-    border-radius: 2em;
-    padding: 0.3em 0.9em;
-    font-size: 0.85rem;
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.skill i {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.skill span {
+    font-size: 1rem;
     color: var(--text);
 }
 
+/* Projects (tarjetas ultra-minimalistas) */
 .project {
     margin-bottom: 1.5rem;
 }
@@ -107,6 +117,7 @@ body {
     text-decoration: underline;
 }
 
+/* Footer */
 .profile-footer {
     text-align: center;
     margin: 4rem 0 2rem;
@@ -125,17 +136,4 @@ body {
 
 .social-links a:hover {
     color: var(--primary);
-}
-
-/* Responsivo */
-@media (max-width: 600px) {
-    .skills-list {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .profile-nav {
-        flex-direction: column;
-        gap: 0.75rem;
-    }
 }
