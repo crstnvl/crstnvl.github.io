@@ -11,62 +11,62 @@
     <div class="container">
         <!-- Header -->
         <header class="profile-header">
-            <h1>Data Analyst</h1>
+            <h1 id="profile-name"></h1>
             <div class="language-selector">
                 <button onclick="changeLanguage('es')">Español</button>
                 <button onclick="changeLanguage('en')">English</button>
             </div>
-            <p class="tagline"></p>
+            <p id="tagline"></p>
             <nav class="profile-nav">
-                <a href="#about">sobre mí</a>
-                <a href="#skills">habilidades</a>
-                <a href="#projects">proyectos</a>
+                <a href="#about" id="about-link"></a>
+                <a href="#skills" id="skills-link"></a>
+                <a href="#projects" id="projects-link"></a>
             </nav>
         </header>
 
         <main>
             <section id="about" class="profile-section">
-                <h2>Sobre mí</h2>
-                <p class="text-about">Soy Cristian Avila, Ingeniero Ambiental con experiencia en análisis de datos y sostenibilidad. Me apasiona convertir datos en información útil para decisiones sostenibles y la mejora de procesos. Actualmente busco oportunidades donde aplicar mis habilidades de análisis predictivo y optimización de procesos.</p>
+                <h2 id="about-title"></h2>
+                <p id="text-about"></p>
             </section>
 
             <section id="skills" class="profile-section">
-                <h2>Habilidades</h2>
+                <h2 id="skills-title"></h2>
                 <div class="skills-list">
                     <div class="skill">
                         <i class="fas fa-python"></i>
-                        <span>Python</span>
+                        <span id="python"></span>
                     </div>
                     <div class="skill">
                         <i class="fas fa-database"></i>
-                        <span>SQL</span>
+                        <span id="sql"></span>
                     </div>
                     <div class="skill">
                         <i class="fab fa-r-project"></i>
-                        <span>R</span>
+                        <span id="r"></span>
                     </div>
                     <div class="skill">
                         <i class="fas fa-table"></i>
-                        <span>Power BI</span>
+                        <span id="powerbi"></span>
                     </div>
                     <div class="skill">
                         <i class="fas fa-file-excel"></i>
-                        <span>Excel</span>
+                        <span id="excel"></span>
                     </div>
                 </div>
             </section>
 
             <section id="projects" class="profile-section">
-                <h2>Proyectos</h2>
+                <h2 id="projects-title"></h2>
                 <div class="project">
-                    <h3>Climate Data Analysis</h3>
-                    <p>Visualización de datos climáticos con Python y análisis de tendencias a largo plazo.</p>
-                    <a href="#" class="project-link">Ver →</a>
+                    <h3 id="project1-title"></h3>
+                    <p id="project1-description"></p>
+                    <a href="#" class="project-link" id="project1-link">Ver →</a>
                 </div>
                 <div class="project">
-                    <h3>Environmental Dashboard</h3>
-                    <p>Creación de un panel interactivo en Power BI para análisis de sostenibilidad en empresas.</p>
-                    <a href="#" class="project-link">Ver →</a>
+                    <h3 id="project2-title"></h3>
+                    <p id="project2-description"></p>
+                    <a href="#" class="project-link" id="project2-link">Ver →</a>
                 </div>
             </section>
         </main>
@@ -82,34 +82,43 @@
     </div>
 
     <script>
-        let language = 'es';  // Idioma predeterminado
-
-        function changeLanguage(lang) {
-            language = lang;
-            updateContent();
-        }
-
-        function updateContent() {
-            // Cambiar los textos según el idioma
-            if (language === 'es') {
-                document.querySelector('h1').innerText = 'Data Analyst';
-                document.querySelector('.tagline').innerText = '';  // Puedes agregar un texto en español si lo deseas
-                document.querySelector('a[href="#about"]').innerText = 'sobre mí';
-                document.querySelector('a[href="#skills"]').innerText = 'habilidades';
-                document.querySelector('a[href="#projects"]').innerText = 'proyectos';
-                document.querySelector('.text-about').innerText = 'Soy Cristian Avila, Ingeniero Ambiental con experiencia en análisis de datos...';
-            } else if (language === 'en') {
-                document.querySelector('h1').innerText = 'Data Analyst';
-                document.querySelector('.tagline').innerText = '';  // Puedes agregar un texto en inglés si lo deseas
-                document.querySelector('a[href="#about"]').innerText = 'about me';
-                document.querySelector('a[href="#skills"]').innerText = 'skills';
-                document.querySelector('a[href="#projects"]').innerText = 'projects';
-                document.querySelector('.text-about').innerText = 'I am Cristian Avila, Environmental Engineer with experience in data analysis...';
-            }
-        }
-
-        // Al cargar la página, establece el idioma
-        updateContent();
-    </script>
-</body>
-</html>
+        const translations = {
+            es: {
+                profileName: "Cristian Ávila | Data Analyst",
+                tagline: "Ingeniero Ambiental y Analista de Datos",
+                aboutLink: "sobre mí",
+                skillsLink: "habilidades",
+                projectsLink: "proyectos",
+                aboutTitle: "Sobre mí",
+                aboutText: "Soy Cristian Avila, Ingeniero Ambiental con experiencia en análisis de datos y sostenibilidad...",
+                skillsTitle: "Habilidades",
+                python: "Python",
+                sql: "SQL",
+                r: "R",
+                powerbi: "Power BI",
+                excel: "Excel",
+                projectsTitle: "Proyectos",
+                project1Title: "Análisis de datos climáticos",
+                project1Description: "Visualización de datos climáticos con Python...",
+                project2Title: "Panel ambiental",
+                project2Description: "Creación de un panel interactivo en Power BI...",
+                project1Link: "Ver →",
+                project2Link: "Ver →"
+            },
+            en: {
+                profileName: "Cristian Avila | Data Analyst",
+                tagline: "Environmental Engineer and Data Analyst",
+                aboutLink: "about me",
+                skillsLink: "skills",
+                projectsLink: "projects",
+                aboutTitle: "About Me",
+                aboutText: "I am Cristian Avila, Environmental Engineer with experience in data analysis and sustainability...",
+                skillsTitle: "Skills",
+                python: "Python",
+                sql: "SQL",
+                r: "R",
+                powerbi: "Power BI",
+                excel: "Excel",
+                projectsTitle: "Projects",
+                project1Title: "Climate Data Analysis",
+                project1Description: "Visualization of climate data with Python
