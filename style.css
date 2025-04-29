@@ -1,227 +1,206 @@
-/* Fuente moderna */
-/* Cambia la fuente por defecto a Roboto */
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Paleta de colores */
+/* Variables de diseño minimalista */
 :root {
-    --primary-color: #0077b6; /* Azul */
-    --secondary-color: #1b263b; /* Gris oscuro */
-    --highlight-color: #ff6347; /* Naranja suave */
+  --primary: #2563eb;       /* Azul moderno */
+  --secondary: #1e293b;     /* Gris azulado oscuro */
+  --text: #334155;          /* Gris oscuro para texto */
+  --text-light: #64748b;    /* Gris medio */
+  --bg: #ffffff;           /* Fondo blanco */
+  --border: #e2e8f0;       /* Borde sutil */
+  --highlight: #f1f5f9;    /* Resaltado suave */
 }
 
-/* Fondo claro para las secciones */
-section {
-    background-color: #f7f7f7;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Tipografía minimalista */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Encabezado minimalista */
 header {
-    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
-    color: black;
-    padding: 4rem 2rem;
-    text-align: center;
-    position: relative;
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
 }
 
 header h1 {
-    font-size: 4rem; /* Increased title size */
-    font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
 }
 
-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
+header .subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  font-weight: 400;
 }
 
-nav {
-    background: #e0e1dd;
-    padding: 1rem;
-    text-align: center;
+/* Navegación simple */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
 }
 
-nav a {
-    margin: 0 15px;
-    color: #0d1b2a;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 20px;
-    border-radius: 25px;
-    transition: background 0.3s, transform 0.3s;
+.main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
 }
 
-nav a:hover {
-    background-color: #ff6347;
-    color: white;
-    transform: translateY(-2px);
+.main-nav a:hover {
+  color: var(--primary);
 }
 
-main {
-    padding: 2rem;
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
 }
 
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+/* Secciones de contenido */
 section {
-    padding: 2rem;
-    background-color: #ffffff;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  opacity: 1;
+  transform: none;
 }
 
 section h2 {
-    font-size: 2rem;
-    color: #0d1b2a;
-    margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
 }
 
+/* Habilidades */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.75rem;
+}
+
+.skill-item {
+  background-color: var(--highlight);
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.skill-item:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Proyectos */
+.project-card {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--secondary);
+}
+
+.text-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* Pie de página minimalista */
 footer {
-    background-color: #1b263b;
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    margin-top: 2rem;
+  text-align: center;
+  padding: 3rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid var(--border);
 }
 
-footer .social-links {
-    margin-top: 1rem;
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
-footer .social-icon {
-    color: white;
-    margin: 0 10px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
+.social-links a {
+  color: var(--text-light);
+  font-size: 1.25rem;
+  transition: color 0.2s ease;
 }
 
-footer .social-icon:hover {
-    color: #ff6347;
-    transform: scale(1.2);
+.social-links a:hover {
+  color: var(--primary);
 }
 
-a {
-    color: #0077b6;
-}
-
-a:hover {
-    color: #ff6347;
-}
-
-/* Tu CSS actual termina más o menos así */
-a {
-    color: #0077b6;
-}
-
-/* Aquí empieza lo nuevo que debes pegar */
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 1rem;
-}
-
-.skill {
-    background-color: #1b263b;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 1rem;
-    transition: background 0.3s ease;
-}
-
-.skill:hover {
-    background-color: #ff6347;
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 1rem;
-    animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 1rem;
-    animation: fadeInUp 1s ease forwards;
-}
-
-section {
-    opacity: 0;
+/* Efectos minimalistas */
+@media (prefers-reduced-motion: no-preference) {
+  [data-aos] {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  [data-aos="fade-up"] {
     transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-/* Cuando la sección esté visible */
-section.visible {
-    opacity: 1;
+    opacity: 0;
+  }
+  
+  [data-aos].aos-animate {
     transform: translateY(0);
-}
-
-/* Efecto hover en enlaces */
-nav a:hover, .project a:hover {
-    color: var(--highlight-color);
-    text-decoration: underline;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-/* Efecto hover en botones y proyectos */
-.project:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s;
-}
-
-.contact-link {
-    color: #0077b6;
-    text-decoration: none;
-    padding: 0 15px; /* Increased padding for more space */
-    font-size: 24px; /* Icon size */
-}
-
-.contact-link:hover {
-    color: #ff6347;
-}
-
-/* Optional: Add spacing between the pipe symbol and icons */
-footer p a:not(:last-child)::after {
-    content: "|";
-    margin: 0 10px;
-    color: #333;
+    opacity: 1;
+  }
 }
