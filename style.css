@@ -1,4 +1,4 @@
-/* ESTILO PRIANKR (https://priankr.github.io) */
+
 :root {
     --text: #0d1117;          /* Negro-grisáceo de GitHub */
     --text-light: #6e7681;    /* Gris texto secundario */
@@ -69,27 +69,27 @@ body {
 .skills-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2rem; /* Espaciado entre los items */
     justify-content: center;
 }
 
 .skill {
     display: flex;
-    flex-direction: column;  /* Esto asegura que el texto quede debajo del ícono */
+    flex-direction: column;  /* Alineación en columna */
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.5rem;  /* Espacio entre ícono y texto */
     font-size: 1rem;
+    text-align: center;
 }
 
 .skill i {
-    font-size: 2rem;  /* Aumento del tamaño del ícono */
+    font-size: 2.5rem;  /* Aumento del tamaño del ícono */
     color: var(--primary);
 }
 
 .skill span {
     font-size: 1rem;
     color: var(--text);
-    text-align: center;  /* Centra el texto debajo del ícono */
 }
 
 /* Projects (tarjetas ultra-minimalistas) */
