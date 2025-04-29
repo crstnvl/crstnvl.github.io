@@ -1,186 +1,113 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cristian Avila | Data Analyst</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>Cristian Avila - Portfolio</title>
+    <!-- Tipografía moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <!-- Header -->
-        <header class="profile-header">
-            <h1 id="profile-name"></h1>
-            <div class="language-selector">
-                <button onclick="changeLanguage('es')">Español</button>
-                <button onclick="changeLanguage('en')">English</button>
-            </div>
-            <p id="tagline"></p>
-            <nav class="profile-nav">
-                <a href="#about" id="about-link"></a>
-                <a href="#skills" id="skills-link"></a>
-                <a href="#projects" id="projects-link"></a>
-            </nav>
-        </header>
 
-        <main>
-            <section id="about" class="profile-section">
-                <h2 id="about-title"></h2>
-                <p id="text-about"></p>
-            </section>
-
-            <section id="skills" class="profile-section">
-                <h2 id="skills-title"></h2>
-                <div class="skills-list">
-                    <div class="skill">
-                        <i class="fas fa-python"></i>
-                        <span id="python"></span>
-                    </div>
-                    <div class="skill">
-                        <i class="fas fa-database"></i>
-                        <span id="sql"></span>
-                    </div>
-                    <div class="skill">
-                        <i class="fab fa-r-project"></i>
-                        <span id="r"></span>
-                    </div>
-                    <div class="skill">
-                        <i class="fas fa-table"></i>
-                        <span id="powerbi"></span>
-                    </div>
-                    <div class="skill">
-                        <i class="fas fa-file-excel"></i>
-                        <span id="excel"></span>
-                    </div>
-                </div>
-            </section>
-
-            <section id="projects" class="profile-section">
-                <h2 id="projects-title"></h2>
-                <div class="project">
-                    <h3 id="project1-title"></h3>
-                    <p id="project1-description"></p>
-                    <a href="#" class="project-link" id="project1-link"></a>
-                </div>
-                <div class="project">
-                    <h3 id="project2-title"></h3>
-                    <p id="project2-description"></p>
-                    <a href="#" class="project-link" id="project2-link"></a>
-                </div>
-                <div class="project">
-                    <h3 id="nfl-project-title"></h3>
-                    <p id="nfl-project-description"></p>
-                    <a href="#" class="project-link" id="nfl-project-link"></a>
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="profile-footer">
-            <div class="social-links">
-                <a href="mailto:c.avila0306@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/cavila0306"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/crstnvl"><i class="fab fa-github"></i></a>
-            </div>
-        </footer>
-    </div>
-
-    <script>
-        const translations = {
-            es: {
-                profileName: "Cristian Ávila | Data Analyst",
-                tagline: "Ingeniero Ambiental y Analista de Datos",
-                aboutLink: "sobre mí",
-                skillsLink: "habilidades",
-                projectsLink: "proyectos",
-                aboutTitle: "Sobre mí",
-                aboutText: "Soy Cristian Avila, Ingeniero Ambiental con experiencia en análisis de datos y sostenibilidad...",
-                skillsTitle: "Habilidades",
-                python: "Python",
-                sql: "SQL",
-                r: "R",
-                powerbi: "Power BI",
-                excel: "Excel",
-                projectsTitle: "Proyectos",
-                project1Title: "Análisis de datos climáticos",
-                project1Description: "Visualización de datos climáticos con Python...",
-                project2Title: "Panel ambiental",
-                project2Description: "Creación de un panel interactivo en Power BI...",
-                nflProjectTitle: "Proyecto NFL",
-                nflProjectDescription: "Análisis de estadísticas de jugadores de la NFL y predicciones de rendimiento usando R.",
-                project1Link: "Ver →",
-                project2Link: "Ver →",
-                nflProjectLink: "Ver proyecto →"
-            },
-            en: {
-                profileName: "Cristian Avila | Data Analyst",
-                tagline: "Environmental Engineer and Data Analyst",
-                aboutLink: "about me",
-                skillsLink: "skills",
-                projectsLink: "projects",
-                aboutTitle: "About Me",
-                aboutText: "I am Cristian Avila, Environmental Engineer with experience in data analysis and sustainability...",
-                skillsTitle: "Skills",
-                python: "Python",
-                sql: "SQL",
-                r: "R",
-                powerbi: "Power BI",
-                excel: "Excel",
-                projectsTitle: "Projects",
-                project1Title: "Climate Data Analysis",
-                project1Description: "Visualization of climate data with Python...",
-                project2Title: "Environmental Dashboard",
-                project2Description: "Creation of an interactive dashboard in Power BI...",
-                nflProjectTitle: "NFL Project",
-                nflProjectDescription: "Analysis of NFL player statistics and performance predictions using R.",
-                project1Link: "View →",
-                project2Link: "View →",
-                nflProjectLink: "View project →"
+<script>
+    // Detectar cuándo una sección entra en la pantalla
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
             }
-        };
+        });
+    });
 
-        let currentLanguage = 'es';
+    // Seleccionamos todas las secciones
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+</script>
 
-        function changeLanguage(lang) {
-            currentLanguage = lang;
-            updateContent();
-        }
+<body>
+    <header>
+        <h1>Data Analyst</h1>
+        <p>I'm Cristian Avila, data Analyst with a passion for sustainability, climate change, sports, and digital culture..</p>
+    </header>
 
-        function updateContent() {
-            const t = translations[currentLanguage];
+    <nav>
+        <a href="#environment">🌎 Environment</a>
+        <a href="#sports">🏈 Sports</a>
+        <a href="#entertainment">🎮 Entertainment</a>
+    </nav>
 
-            document.title = t.profileName;
-            document.querySelector('#profile-name').innerText = t.profileName;
-            document.querySelector('#tagline').innerText = t.tagline;
-            document.querySelector('#about-link').innerText = t.aboutLink;
-            document.querySelector('#skills-link').innerText = t.skillsLink;
-            document.querySelector('#projects-link').innerText = t.projectsLink;
+    <nav>...</nav>
 
-            document.querySelector('#about-title').innerText = t.aboutTitle;
-            document.querySelector('#text-about').innerText = t.aboutText;
+<section id="about" data-aos="fade-up">
+    <h2>🙋‍♂️ About Me</h2>
+    <p>Hello, I'm Cristian Avila, an Environmental Engineer transitioning into the Data Analytics field. With a strong background in sustainability, environmental health and safety (EHS), and project management, I now focus on transforming data into meaningful insights that support better decision-making and sustainable development.</p>
+    <p>I am passionate about combining my environmental expertise with data-driven strategies. I specialize in data analysis with Python and SQL, creating interactive dashboards with Power BI, and applying predictive analytics to optimize processes in both industrial and environmental contexts.</p>
+    <p>My main interest lies in working on projects related to climate change, where data can be a powerful tool to drive environmental action. However, I am also open to opportunities in sports analytics, as well as the entertainment sector, particularly in areas like esports, gaming, and anime analytics.</p>
+    <p>Currently, I’m seeking opportunities where I can contribute to projects that drive positive environmental impact or deliver meaningful insights across different industries through the smart use of data, technology, and innovation.</p>
+</section>
 
-            document.querySelector('#skills-title').innerText = t.skillsTitle;
-            document.querySelector('#python').innerText = t.python;
-            document.querySelector('#sql').innerText = t.sql;
-            document.querySelector('#r').innerText = t.r;
-            document.querySelector('#powerbi').innerText = t.powerbi;
-            document.querySelector('#excel').innerText = t.excel;
+ <section id="skills" data-aos="fade-up">
+    <h2>🛠️ Skills</h2>
+    <div class="skills-container">
+        <div class="skill">Python</div>
+        <div class="skill">R</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Power BI</div>
+        <div class="skill">Intermediate Excel</div>
+        <div class="skill">Predictive Analysis</div>
+        <div class="skill">Data Science</div>
+        <div class="skill">Environmental Sustainability</div>
+        <div class="skill">Machine Learning (basic)</div>
+    </div>
+</section>
 
-            document.querySelector('#projects-title').innerText = t.projectsTitle;
-            document.querySelector('#project1-title').innerText = t.project1Title;
-            document.querySelector('#project1-description').innerText = t.project1Description;
-            document.querySelector('#project1-link').innerText = t.project1Link;
-            document.querySelector('#project2-title').innerText = t.project2Title;
-            document.querySelector('#project2-description').innerText = t.project2Description;
-            document.querySelector('#project2-link').innerText = t.project2Link;
-            document.querySelector('#nfl-project-title').innerText = t.nflProjectTitle;
-            document.querySelector('#nfl-project-description').innerText = t.nflProjectDescription;
-            document.querySelector('#nfl-project-link').innerText = t.nflProjectLink;
-        }
+    <main>
+        <section id="environment" data-aos="fade-up">
+            <h2>🌎 Environmental Projects</h2>
+            <ul>
+                <li><a href="projects/environment.html">View Environmental Projects</a></li>
+            </ul>
+        </section>
 
-        // Al cargar la página, establece el idioma predeterminado
-        updateContent();
+        <section id="sports" data-aos="fade-up">
+            <h2>🏈 Sports Projects</h2>
+            <ul>
+                <li><a href="projects/sports.html">View Sports Projects</a></li>
+            </ul>
+        </section>
+
+        <section id="entertainment" data-aos="fade-up">
+            <h2>🎮 Entertainment Projects</h2>
+            <ul>
+                <li><a href="projects/entertainment.html">View Entertainment Projects</a></li>
+            </ul>
+        </section>
+    </main>
+
+<footer>
+    <p>Contact me via: 
+        <a href="mailto:c.avila0306@gmail.com" class="contact-link">
+            <i class="fas fa-envelope"></i>
+        </a> | 
+        <a href="https://www.linkedin.com/in/cavila0306" target="_blank" class="contact-link">
+            <i class="fab fa-linkedin"></i>
+        </a> | 
+        <a href="https://github.com/crstnvl" target="_blank" class="contact-link">
+            <i class="fab fa-github"></i>
+        </a>
+    </p>
+</footer>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 </html>
