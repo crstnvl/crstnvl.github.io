@@ -4,89 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cristian Avila | Data Analyst</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Cristian Avila <span>Data Analyst</span></h1>
-            <p class="subtitle">Sustainability | Sports | Digital Culture</p>
+        <!-- Header estilo priankr -->
+        <header class="profile-header">
+            <h1>Cristian Avila</h1>
+            <p class="tagline">Data Analyst | Sustainability & Sports</p>
+            <nav class="profile-nav">
+                <a href="#about">about</a>
+                <a href="#skills">skills</a>
+                <a href="#projects">projects</a>
+            </nav>
         </header>
 
-        <nav class="main-nav">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-        </nav>
-
         <main>
-            <!-- Sección About (original) -->
-            <section id="about" data-aos="fade-up">
-                <h2>🙋‍♂️ About Me</h2>
-                <p>Hello, I'm Cristian Avila, an Environmental Engineer transitioning into the Data Analytics field. With a strong background in sustainability, environmental health and safety (EHS), and project management, I now focus on transforming data into meaningful insights that support better decision-making and sustainable development.</p>
-                <p>I am passionate about combining my environmental expertise with data-driven strategies. I specialize in data analysis with Python and SQL, creating interactive dashboards with Power BI, and applying predictive analytics to optimize processes in both industrial and environmental contexts.</p>
-                <p>My main interest lies in working on projects related to climate change, where data can be a powerful tool to drive environmental action. However, I am also open to opportunities in sports analytics, as well as the entertainment sector, particularly in areas like esports, gaming, and anime analytics.</p>
-                <p>Currently, I’m seeking opportunities where I can contribute to projects that drive positive environmental impact or deliver meaningful insights across different industries through the smart use of data, technology, and innovation.</p>
+            <!-- Sección About (tu texto original) -->
+            <section id="about" class="profile-section">
+                <h2>About</h2>
+                <p>Hello, I'm Cristian Avila, an Environmental Engineer transitioning into Data Analytics...</p>
+                <!-- TUS 4 PÁRRAFOS ORIGINALES AQUÍ -->
             </section>
 
-            <!-- Sección Skills (original + nuevo diseño) -->
-            <section id="skills" data-aos="fade-up">
-                <h2>🛠️ Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">Python</div>
-                    <div class="skill-item">R</div>
-                    <div class="skill-item">SQL</div>
-                    <div class="skill-item">Power BI</div>
-                    <div class="skill-item">Excel</div>
-                    <div class="skill-item">Predictive Analysis</div>
-                    <div class="skill-item">Data Science</div>
-                    <div class="skill-item">Sustainability</div>
-                    <div class="skill-item">Machine Learning</div>
+            <!-- Skills (formato priankr) -->
+            <section id="skills" class="profile-section">
+                <h2>Skills</h2>
+                <div class="skills-list">
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>Power BI</span>
+                    <!-- Tus skills originales -->
                 </div>
             </section>
 
-            <!-- Sección Projects (original reorganizado) -->
-            <section id="projects" data-aos="fade-up">
-                <h2>🚀 Projects</h2>
-                
-                <div class="project-card">
-                    <h3>🌎 Environmental Projects</h3>
-                    <p>Climate data analysis and sustainability solutions.</p>
-                    <a href="projects/environment.html" class="text-link">View Projects →</a>
+            <!-- Projects (estilo priankr) -->
+            <section id="projects" class="profile-section">
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3>Environmental Analysis</h3>
+                    <p>Climate data visualization with Python.</p>
+                    <a href="#" class="project-link">View →</a>
                 </div>
-
-                <div class="project-card">
-                    <h3>🏈 Sports Analytics</h3>
-                    <p>Player performance and statistical modeling.</p>
-                    <a href="projects/sports.html" class="text-link">View Projects →</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>🎮 Entertainment</h3>
-                    <p>Gaming and esports data visualization.</p>
-                    <a href="projects/entertainment.html" class="text-link">View Projects →</a>
-                </div>
+                <!-- Más proyectos -->
             </section>
         </main>
 
-        <footer>
+        <!-- Footer minimalista -->
+        <footer class="profile-footer">
             <div class="social-links">
                 <a href="mailto:c.avila0306@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://linkedin.com/in/cavila0306"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/crstnvl"><i class="fab fa-github"></i></a>
             </div>
-            <p class="copyright">© 2023 Cristian Avila</p>
         </footer>
     </div>
-
-    <!-- AOS Animation JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 800 });
-    </script>
 </body>
 </html>
