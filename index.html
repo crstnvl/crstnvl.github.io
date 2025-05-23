@@ -168,5 +168,22 @@
     <script>
         AOS.init();
     </script>
+
+    <script>
+document.getElementById('toggle-about').onclick = function() {
+    var shortDiv = document.getElementById('about-short');
+    var fullDiv = document.getElementById('about-full');
+    var btn = document.getElementById('toggle-about');
+    if (fullDiv.style.display === "none") {
+        shortDiv.style.display = "none";
+        fullDiv.style.display = "block";
+        btn.textContent = "Ver menos";
+    } else {
+        shortDiv.style.display = "block";
+        fullDiv.style.display = "none";
+        btn.textContent = "Ver más";
+    }
+};
+</script>
 </body>
 </html>
