@@ -1,6 +1,3 @@
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,60 +7,121 @@
     <!-- Tipografía moderna -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
-.button-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #0099cc;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 6px;
-  text-decoration: none;
-  margin-right: 10px;
-  box-shadow: 0 2px 8px #0099cc55;
-  transition: background 0.2s;
-}
-.button-link.github {
-  background: #24292e;
-}
-.button-link:hover {
-  background: #0077aa;
-}
-.button-link.github:hover {
-  background: #444;
-}
-.caption {
-  font-style: italic;
-  color: #444;
-  margin-bottom: 2rem;
-}
-</style>
-
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        background: #f7f7f7;
+        color: #222;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background: #0099cc;
+        color: #fff;
+        padding: 2rem 0 1rem 0;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    nav {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    nav a {
+        display: inline-block;
+        margin: 0 1.2em;
+        color: #0099cc;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.15em;
+        transition: color 0.2s;
+    }
+    nav a:hover {
+        color: #005577;
+    }
+    section {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px #0001;
+        margin: 1.2rem auto;
+        padding: 2rem 2rem 1rem 2rem;
+        max-width: 800px;
+    }
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .skill {
+        background: #e0f7fa;
+        color: #00748d;
+        padding: 8px 15px;
+        border-radius: 6px;
+        font-size: 1em;
+        font-weight: 500;
+        box-shadow: 0 1px 4px #0001;
+    }
+    .button-link {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #0099cc;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 6px;
+        text-decoration: none;
+        margin-right: 10px;
+        box-shadow: 0 2px 8px #0099cc55;
+        transition: background 0.2s;
+        cursor: pointer;
+        border: none;
+    }
+    .button-link.github {
+        background: #24292e;
+    }
+    .button-link:hover {
+        background: #0077aa;
+    }
+    .button-link.github:hover {
+        background: #444;
+    }
+    .caption {
+        font-style: italic;
+        color: #444;
+        margin-bottom: 2rem;
+    }
+    footer {
+        text-align: center;
+        margin: 2.5rem 0 0 0;
+        color: #777;
+    }
+    .contact-link {
+        color: #0099cc;
+        margin: 0 0.6em;
+        font-size: 1.4em;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    .contact-link:hover {
+        color: #005577;
+    }
+    @media (max-width: 700px) {
+        section {
+            padding: 1.1rem 0.7rem 0.7rem 0.7rem;
+        }
+    }
+    </style>
 </head>
-
-<script>
-    // Detectar cuándo una sección entra en la pantalla
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    });
-
-    // Seleccionamos todas las secciones
-    document.querySelectorAll('section').forEach(section => {
-        observer.observe(section);
-    });
-</script>
 
 <body>
     <header>
         <h1>Data Analyst</h1>
-        <p>I'm Cristian Avila, data Analyst with a passion for sustainability, climate change, sports, and digital culture..</p>
+        <p>I'm Cristian Avila, data Analyst with a passion for sustainability, climate change, sports, and digital culture.</p>
     </header>
 
     <nav>
@@ -72,73 +130,70 @@
         <a href="#entertainment">🎮 Entertainment</a>
     </nav>
 
-    <nav>...</nav>
+    <section id="about" data-aos="fade-up">
+        <h2>🙋‍♂️ About Me</h2>
+        <div id="about-short">
+            <p>
+                Hello, I’m Cristian Ávila, an Environmental Engineer with a background in EHS and sustainability. In my previous roles within the construction and industrial sectors, I often faced the challenge of turning large volumes of operational and environmental data into actionable insights.
+            </p>
+        </div>
+        <div id="about-full" style="display:none;">
+            <p>
+                Hello, I’m Cristian Ávila, an Environmental Engineer with a background in EHS and sustainability. In my previous roles within the construction and industrial sectors, I often faced the challenge of turning large volumes of operational and environmental data into actionable insights.
+            </p>
+            <p>
+                Realizing the power of data to drive meaningful change, I upskilled in data analytics—learning Python, SQL, Power BI, and predictive modeling. I applied these skills to analyze key performance metrics, build dashboards, and support compliance and risk mitigation strategies in EHS operations.
+            </p>
+            <p>
+                As a result, I was able to improve reporting efficiency, identify critical environmental trends, and support decision-making processes with clear and impactful visualizations.
+            </p>
+            <p>
+                Now, I’m focused on leveraging this blend of environmental expertise and data science to work on projects that tackle climate change and promote sustainable development. I’m also open to applying my analytical skills in dynamic fields like sports analytics, esports, gaming, and anime—where data is shaping the future of entertainment and fan experiences.
+            </p>
+        </div>
+        <button id="toggle-about" class="button-link" style="margin-top:10px;">Ver más</button>
+    </section>
 
-<section id="about" data-aos="fade-up">
-    <h2>🙋‍♂️ About Me</h2>
-    <div id="about-short">
-        <p>
-            Hello, I’m Cristian Ávila, an Environmental Engineer with a background in EHS and sustainability. In my previous roles within the construction and industrial sectors, I often faced the challenge of turning large volumes of operational and environmental data into actionable insights.
-        </p>
-    </div>
-    <div id="about-full" style="display:none;">
-        <p>
-            Hello, I’m Cristian Ávila, an Environmental Engineer with a background in EHS and sustainability. In my previous roles within the construction and industrial sectors, I often faced the challenge of turning large volumes of operational and environmental data into actionable insights.
-        </p>
-        <p>
-            Realizing the power of data to drive meaningful change, I upskilled in data analytics—learning Python, SQL, Power BI, and predictive modeling. I applied these skills to analyze key performance metrics, build dashboards, and support compliance and risk mitigation strategies in EHS operations.
-        </p>
-        <p>
-            As a result, I was able to improve reporting efficiency, identify critical environmental trends, and support decision-making processes with clear and impactful visualizations.
-        </p>
-        <p>
-            Now, I’m focused on leveraging this blend of environmental expertise and data science to work on projects that tackle climate change and promote sustainable development. I’m also open to applying my analytical skills in dynamic fields like sports analytics, esports, gaming, and anime—where data is shaping the future of entertainment and fan experiences.
-        </p>
-    </div>
-    <button id="toggle-about" class="button-link" style="margin-top:10px;">Ver más</button>
-</section>
-
- <section id="skills" data-aos="fade-up">
-    <h2>🛠️ Skills</h2>
-    <div class="skills-container">
-        <div class="skill">Python</div>
-        <div class="skill">R</div>
-        <div class="skill">SQL</div>
-        <div class="skill">Power BI</div>
-        <div class="skill">Intermediate Excel</div>
-        <div class="skill">Predictive Analysis</div>
-        <div class="skill">Data Science</div>
-        <div class="skill">Environmental Sustainability</div>
-        <div class="skill">Machine Learning (basic)</div>
-    </div>
-</section>
+    <section id="skills" data-aos="fade-up">
+        <h2>🛠️ Skills</h2>
+        <div class="skills-container">
+            <div class="skill">Python</div>
+            <div class="skill">R</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">Intermediate Excel</div>
+            <div class="skill">Predictive Analysis</div>
+            <div class="skill">Data Science</div>
+            <div class="skill">Environmental Sustainability</div>
+            <div class="skill">Machine Learning (basic)</div>
+        </div>
+    </section>
 
     <main>
         <section id="environment" data-aos="fade-up">
-    <h2>🌎 Environmental Projects</h2>
-    <ul>
-        <li>
-            <strong>Análisis del agujero de la capa de ozono en la Antártida</strong><br>
-            <a href="https://d3d2102iue02ht.cloudfront.net/ozono/ozono.html" target="_blank" class="button-link">
-                🌐 Ver demo en AWS
-            </a>
-            <a href="https://github.com/crstnvl/ozone-hole-analysis" target="_blank" class="button-link github">
-                <i class="fab fa-github"></i> Ver código en GitHub
-            </a>
-            <p class="caption">Análisis visual y predictivo del agujero de ozono usando Python, Cartopy y regresión lineal.</p>
-        </li>
-    </ul>
-</section>
+            <h2>🌎 Environmental Projects</h2>
+            <ul>
+                <li>
+                    <strong>Análisis del agujero de la capa de ozono en la Antártida</strong><br>
+                    <a href="https://d3d2102iue02ht.cloudfront.net/ozono/ozono.html" target="_blank" class="button-link">
+                        🌐 Ver demo en AWS
+                    </a>
+                    <a href="https://github.com/crstnvl/ozone-hole-analysis" target="_blank" class="button-link github">
+                        <i class="fab fa-github"></i> Ver código en GitHub
+                    </a>
+                    <p class="caption">Análisis visual y predictivo del agujero de ozono usando Python, Cartopy y regresión lineal.</p>
+                </li>
+            </ul>
+        </section>
 
         <section id="sports" data-aos="fade-up">
             <h2>🏈 Sports Projects</h2>
             <div class="project">
-  <h3>Proyecto NFL Ofensiva</h3>
-  <p>Exploración de datos ofensivos de la NFL usando Python, visualización con Matplotlib y despliegue en GitHub Pages.</p>
-  <a href="https://crstnvl.github.io/nfl-ofensiva-eda/" target="_blank" class="project-link">Ver proyecto →</a><br />
-  <a href="https://github.com/crstnvl/nfl-ofensiva-eda" target="_blank" class="project-link">Ver repositorio →</a>
-</div>
-
+                <h3>Proyecto NFL Ofensiva</h3>
+                <p>Exploración de datos ofensivos de la NFL usando Python, visualización con Matplotlib y despliegue en GitHub Pages.</p>
+                <a href="https://crstnvl.github.io/nfl-ofensiva-eda/" target="_blank" class="project-link">Ver proyecto →</a><br />
+                <a href="https://github.com/crstnvl/nfl-ofensiva-eda" target="_blank" class="project-link">Ver repositorio →</a>
+            </div>
         </section>
         
         <section id="entertainment" data-aos="fade-up">
@@ -149,19 +204,19 @@
         </section>
     </main>
 
-<footer>
-    <p>Contact me via: 
-        <a href="mailto:c.avila0306@gmail.com" class="contact-link">
-            <i class="fas fa-envelope"></i>
-        </a> | 
-        <a href="https://www.linkedin.com/in/cavila0306" target="_blank" class="contact-link">
-            <i class="fab fa-linkedin"></i>
-        </a> | 
-        <a href="https://github.com/crstnvl" target="_blank" class="contact-link">
-            <i class="fab fa-github"></i>
-        </a>
-    </p>
-</footer>
+    <footer>
+        <p>Contact me via: 
+            <a href="mailto:c.avila0306@gmail.com" class="contact-link">
+                <i class="fas fa-envelope"></i>
+            </a> | 
+            <a href="https://www.linkedin.com/in/cavila0306" target="_blank" class="contact-link">
+                <i class="fab fa-linkedin"></i>
+            </a> | 
+            <a href="https://github.com/crstnvl" target="_blank" class="contact-link">
+                <i class="fab fa-github"></i>
+            </a>
+        </p>
+    </footer>
 
     <!-- AOS Animation JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -169,21 +224,39 @@
         AOS.init();
     </script>
 
+    <!-- Toggle About Me Script -->
     <script>
-document.getElementById('toggle-about').onclick = function() {
-    var shortDiv = document.getElementById('about-short');
-    var fullDiv = document.getElementById('about-full');
-    var btn = document.getElementById('toggle-about');
-    if (fullDiv.style.display === "none") {
-        shortDiv.style.display = "none";
-        fullDiv.style.display = "block";
-        btn.textContent = "Ver menos";
-    } else {
-        shortDiv.style.display = "block";
-        fullDiv.style.display = "none";
-        btn.textContent = "Ver más";
-    }
-};
-</script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('toggle-about').onclick = function() {
+            var shortDiv = document.getElementById('about-short');
+            var fullDiv = document.getElementById('about-full');
+            var btn = document.getElementById('toggle-about');
+            if (fullDiv.style.display === "none") {
+                shortDiv.style.display = "none";
+                fullDiv.style.display = "block";
+                btn.textContent = "Ver menos";
+            } else {
+                shortDiv.style.display = "block";
+                fullDiv.style.display = "none";
+                btn.textContent = "Ver más";
+            }
+        };
+    });
+    </script>
+    <!-- AOS Observer Script (si lo usas) -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    });
+    </script>
 </body>
 </html>
