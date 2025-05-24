@@ -17,6 +17,50 @@ section {
 }
 
 header {
+
+    .bubbles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.bubble-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px #0099cc22;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  max-width: 370px;
+  min-width: 280px;
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.bubble-card:hover {
+  transform: translateY(-6px) scale(1.025);
+  box-shadow: 0 8px 32px #0099cc33;
+}
+
+.bubble-icon {
+  margin-bottom: 1rem;
+}
+
+.bubble-card h3 {
+  font-size: 1.25em;
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+}
+
+.bubble-card p {
+  font-size: 1em;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+
     background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
     color: black;
     padding: 4rem 2rem;
