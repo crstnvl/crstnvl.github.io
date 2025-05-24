@@ -170,42 +170,45 @@
     </section>
 
     <main>
-        <section id="environment" data-aos="fade-up">
-            <h2>🌎 Environmental Projects</h2>
-            <ul>
-                <li>
-                    <strong>Análisis del agujero de la capa de ozono en la Antártida</strong><br>
-                    <a href="https://d3d2102iue02ht.cloudfront.net/ozono/ozono.html" target="_blank" class="button-link">
-                        🌐 Ver demo en AWS
-                    </a>
-                    <a href="https://github.com/crstnvl/ozone-hole-analysis" target="_blank" class="button-link github">
-                        <i class="fab fa-github"></i> Ver código en GitHub
-                    </a>
-                    <p class="caption">Análisis visual y predictivo del agujero de ozono usando Python, Cartopy y regresión lineal.</p>
-                </li>
-            </ul>
+        <section id="environmental-projects" data-aos="fade-up" style="margin-top: 3rem;">
+    <h2><span style="font-size:1.3em;">🌎</span> Environmental Projects</h2>
+    <div class="bubbles-container">
 
-            <section id="dashboard-energy" data-aos="fade-up" style="margin-top: 3rem;">
-    <h2>🔋 Dashboard: Renewable Energy in Mexico</h2>
-    <p>
-        This interactive dashboard, built with Python and Streamlit, analyzes and visualizes the historical trends of renewable energy generation in Mexico (2000–2023). Explore key data, compare sources (hydroelectric, wind, solar, etc.), and see how renewables contribute to the national electricity mix.
-    </p>
-    <ul>
-        <li>Dynamic comparison between renewable sources and total national electricity generation</li>
-        <li>Year filter and custom selection of energy types</li>
-        <li>Basic trend prediction for future years</li>
-        <li>Data tables for download and further analysis</li>
-    </ul>
-    <!-- Dashboard image - update the path if you have your own screenshot -->
-    <img src="img/dashboard-energy-example.png" alt="Dashboard Example - Renewable Energy" style="max-width: 650px; width: 100%; box-shadow: 0 2px 16px #0099cc44; border-radius: 10px; margin-bottom: 1.5rem;">
-    <br>
-    <a href="https://energias-mexico-0.streamlit.app/" target="_blank" class="button-link" style="background: #ff4b4b; font-size: 1.1em; margin-right: 8px;">
-        🚀 View Interactive Dashboard
-    </a>
-    <a href="https://github.com/crstnvl/energia-mexico" target="_blank" class="button-link github">
-        <i class="fab fa-github"></i> View GitHub Repository
-    </a>
+        <!-- Card: Ozone Hole Analysis on AWS -->
+        <div class="bubble-card">
+            <div class="bubble-icon">
+                <img src="img/aws-icon.png" alt="AWS Icon" style="width:48px;height:48px;">
+            </div>
+            <h3>Ozone Hole Analysis in Antarctica</h3>
+            <p>
+                Static website hosted on AWS S3 and delivered with CloudFront.  
+                Visual and predictive analysis of the Antarctic ozone hole using Python, Cartopy, and linear regression.
+            </p>
+            <a href="https://d3d2102iue02ht.cloudfront.net/" target="_blank" class="button-link" style="background:#0099cc; margin-bottom:8px;">🌐 View demo on AWS</a>
+            <a href="https://github.com/crstnvl/aws-portfolio-example" target="_blank" class="button-link github">
+                <i class="fab fa-github"></i> View GitHub
+            </a>
+        </div>
+
+        <!-- Card: Renewable Energy Dashboard -->
+        <div class="bubble-card">
+            <div class="bubble-icon">
+                <img src="img/dashboard-energy-example.png" alt="Dashboard Example" style="width:48px;height:48px;border-radius:6px;">
+            </div>
+            <h3>Dashboard: Renewable Energy in Mexico</h3>
+            <p>
+                Interactive dashboard built with Python and Streamlit to analyze and visualize the evolution of renewable energy generation in Mexico (2000–2023).  
+                Includes dynamic comparison, year filtering, and trend prediction.
+            </p>
+            <a href="https://energias-mexico-0.streamlit.app/" target="_blank" class="button-link" style="background:#ff4b4b; margin-bottom:8px;">🚀 View Interactive Dashboard</a>
+            <a href="https://github.com/crstnvl/energia-mexico" target="_blank" class="button-link github">
+                <i class="fab fa-github"></i> View GitHub Repository
+            </a>
+        </div>
+
+    </div>
 </section>
+
 
         </section>
 
